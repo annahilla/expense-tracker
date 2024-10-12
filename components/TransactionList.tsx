@@ -10,7 +10,7 @@ const TransactionList = async () => {
   }
 
   return (
-    <>
+    <div className="transactions-list">
       <h3>History</h3>
       <ul className="list">
         {transactions &&
@@ -18,7 +18,7 @@ const TransactionList = async () => {
             <TransactionItem key={transaction.id} transaction={transaction} />
           ))}
       </ul>
-    </>
+    </div>
   );
 };
 

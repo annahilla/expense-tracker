@@ -13,12 +13,14 @@ const HomePage = async () => {
   }
 
   return (
-    <main>
+    <main className="tracker">
       <h2>Welcome, {user.firstName}</h2>
       <Balance />
       <IncomeExpense />
-      <AddTransaction />
-      <TransactionList />
+      <div className="transactions">
+        <AddTransaction />
+        <TransactionList />
+      </div>
     </main>
   );
 };

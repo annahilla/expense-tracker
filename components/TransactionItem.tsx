@@ -4,6 +4,7 @@ import { Transaction } from "@/types/Transaction";
 import { addCommas } from "@/lib/utils";
 import { toast } from "react-toastify";
 import deleteTransaction from "@/app/actions/deleteTransaction";
+import { IoIosClose } from "react-icons/io";
 
 const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
@@ -35,7 +36,7 @@ const TransactionItem = ({ transaction }: { transaction: Transaction }) => {
         onClick={() => handleDeleteTransaction(transaction.id)}
         className="delete-btn"
       >
-        x
+        <IoIosClose className="close-icon" />
       </button>
     </li>
   );

@@ -16,7 +16,7 @@ const AddTransaction = () => {
     }
   };
   return (
-    <>
+    <div className="add-transaction">
       <h3>Add Transaction</h3>
       <form ref={formRef} action={clientAction}>
         <div className="form-control">
@@ -25,8 +25,7 @@ const AddTransaction = () => {
         </div>
         <div className="form-control">
           <label htmlFor="amount">
-            Amount <br />
-            (negative - expense, positive - income)
+            Amount (negative is an expense and positive is an income)
           </label>
           <input
             type="number"
@@ -38,7 +37,7 @@ const AddTransaction = () => {
         </div>
         <button className="btn">Add transaction</button>
       </form>
-    </>
+    </div>
   );
 };
 
